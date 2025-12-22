@@ -1,1 +1,4 @@
 pandas
+pyarrow
+fastparquet
+huggingface_hub
