@@ -1,4 +1,4 @@
-# Replication Package: "What Makes an Agentic Pull Request Likely to be Accepted? Insights and Limitations From the Analysis of the AIDev Dataset"
+# Replication Package: "What Factors are Associated with Agentic Pull Request Acceptance? Insights and Limitations from the AIDev Dataset"
 
 ## Repository Structure
 
