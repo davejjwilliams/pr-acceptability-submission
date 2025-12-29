@@ -49,3 +49,9 @@ Running all cells will produce the findings presented in the paper.
 The analysis for RQ1 can be found in the [`rq2.ipynb`](./rq2.ipynb) notebook.
 
 Running all cells will produce the findings presented in the paper.
+
+### 5. Data and Ethical Limitations
+
+The analysis for the numbers reported in Section 3 can be found in the [`threats.ipynb`](./threats.ipynb) notebook.
+
+Running all cells will produce the findings presented in the paper.
