@@ -73,31 +73,6 @@ def df_column_statistics(pr_df, column_name):
     print(f"Max = {max_rejected}")
 
 
-def fishers_exact_test(pr_df, feature_column):
-    """
-    Perform Fisher's Exact Test to analyze the relationship between a feature and PR acceptance.
-
-    Parameters:
-    - pr_df: DataFrame containing PR data
-    - feature_column: Name of the boolean column to test (e.g., 'related_issue')
-
-    Returns:
-    - Dictionary containing test results
-    """
-    # Create contingency table
-    contingency_table = pd.crosstab(pr_df[feature_column], pr_df['accepted'])
-
-    print(f"Fisher's Exact Test for '{feature_column}' vs 'accepted'")
-    print("\nContingency Table:")
-    print(contingency_table)
-
-    # Perform Fisher's Exact Test
-    oddsratio, p_value = stats.fisher_exact(contingency_table)
-
-    print(f"\nOdds Ratio: {oddsratio:.4f}")
-    print(f"P-value: {p_value:.4f}")
-
-
 def chi_squared_test(pr_df, feature_column):
     """
     Perform Chi-squared Test to analyze the relationship between a feature and PR acceptance,
@@ -133,7 +108,8 @@ def chi_squared_test(pr_df, feature_column):
     print(f"Degrees of freedom: {dof}")
     print(f"N: {n}")
     print(f"Cramér's V: {cramer_v:.4f}")
-    print(f"Summary: $\chi^2$ = {chi2:.2f}, $p$ < {"0.001" if p_value < 0.001 else f'{p_value:.3f}'}, Cramér's V = {cramer_v:.3f}")
+    print(f"Summary: $\chi^2$ = {chi2:.2f}, $p$ < {"0.001" if p_value < 0.001 else f'{p_value:.3f}'}, Cramér's V = {
+          cramer_v:.3f}")
 
 
 def filter_top_n_for_cols(pr_dataframe: pd.DataFrame, col_list: list[str], filter_percent=10):
