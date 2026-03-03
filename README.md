@@ -1,13 +1,15 @@
-# Replication Package: "What Factors are Associated with Agentic Pull Request Acceptance? Insights and Limitations from the AIDev Dataset"
+# Replication Package: "What Factors are Associated with Agentic Pull Request Acceptance? Initial Results from the AIDev Dataset"
 
 ## Repository Structure
 
-- [`data_prep.ipynb`](./data_prep.ipynb): Notebook for dataset annotation and filtering
-- [`limitations_guidelines.ipynb`](./limitations_guidelines.ipynb): Notebook for analysis conducted in Section 3
+- [`data_prep.ipynb`](./data_prep.ipynb): Notebook for dataset retrieval, annotation and filtering
+- [`limitations_dataset.ipynb`](./limitations_dataset.ipynb): Notebook for analysis conducted in Section 3
 - [`README.MD`](./README.md): This README file
 - [`requirements.txt`](./requirements.txt): Dependencies for all analysis
 - [`rq1.ipynb`](./rq1.ipynb): Notebook containing all analysis conducted for individual factor analysis in RQ1
-- [`rq2.ipynb`](./rq2.ipynb): Notebook containing all analysis conducted for per-repository case studies in RQ2
+- [`rq2_task_label_check.ipynb`](./rq2_task_label_check.ipynb): Notebook containing sanity check for task type label accuracy (used in RQ2 and discussed in threats to validity)
+- [`./rq2_task_labels_rater1.csv`](./rq2_task_labels_rater1.csv) & [`./rq2_task_labels_rater2.csv`](./rq2_task_labels_rater2.csv): Independent manual labelling of task types for 300 agentic PR by two authors
+- [`rq2.ipynb`](./rq2.ipynb): Notebook containing all analysis conducted for repository subset case studies in RQ2
 - [`utils.py`](./utils.py): Util analysis functions used across both RQ1 and RQ2 analysis
 
 
@@ -57,5 +59,5 @@ You can reproduce all of the results presented in the paper under RQ2 by running
 
 ### 5. Data and Ethical Limitations
 
-The analysis for the numbers reported in Section 3 can be found in the [`limitations_guidelines.ipynb`](./limitations_guidelines.ipynb) notebook.
+The analysis for the numbers reported in Sections 4 and 5 can be found in the [`limitations_guidelines.ipynb`](./limitations_guidelines.ipynb) notebook.
 Running all cells will produce the findings presented in the paper.
